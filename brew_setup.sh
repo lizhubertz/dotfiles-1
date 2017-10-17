@@ -8,6 +8,7 @@ brew tap caskroom/versions
 brew tap caskroom/fonts
 
 brew_packages=(
+  atom
   autoconf
   autojump
   bash-completion
@@ -29,6 +30,7 @@ brew_packages=(
   ssh-copy-id
   the_silver_searcher
   tig
+  tmux
   tree
   trash
   unrar
@@ -41,41 +43,27 @@ brew install ${brew_packages[@]}
 cask_packages=(
   1password
   alfred
-  alternote
-  appcleaner
-  bartender
-  betterzipql
-  cleanmymac
   dash
+  datagrip
   dropbox
   fantastical
-  flux
-  focus
   google-chrome
   google-chrome-canary
-  hipchat
-  iterm2-beta
-  lastfm
-  polymail
+  nvalt
   qlcolorcode
   qlimagesize
   qlmarkdown
   quicklook-json
   rescuetime
-  screenhero
+  rubymine
   slack
   spectacle
   spotify
-  suspicious-package
-  transmission
-  vlc
   webpquicklook
 )
 
 brew cask install --force --appdir="/Applications" ${cask_packages[@]}
 
-rm -rf "$HOME/Documents"
-ln -sfn "$HOME/Dropbox/Documents" $HOME
 # Install fonts
 brew tap caskroom/fonts
 
