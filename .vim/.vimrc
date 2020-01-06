@@ -1,15 +1,12 @@
 set nocp
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
-syntax on
 filetype plugin indent on
 call pathogen#infect()
 
 set directory=~/.vim/tmp
 
 set t_Co=256
-set background=dark
-colorscheme Tomorrow-Night-Eighties
 if has('gui_running')
   set guifont=Input Mono:h12
 endif

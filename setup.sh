@@ -10,7 +10,8 @@ echo "Setting OSX Defaults..."
 ./osx_defaults.sh
 
 mkdir ~/.tmp
-mkdir ~/Development
+mkdir ~/code
+mkdir ~/code/work
 ln -sfn "$(pwd -P)" ~/
 ln -sfn "$(pwd)/.bash_profile" ~
 ln -sfn "$(pwd)/.gitconfig" ~
@@ -19,7 +20,6 @@ ln -sfn "$(pwd)/.gitattributes" ~
 ln -sfn "$(pwd)/.bash-it" ~
 ln -sfn "$(pwd)/.inputrc" ~
 ln -sfn "$(pwd)/.gemrc" ~
-ln -sfn "$(pwd)/.npmrc" ~
 ln -sfn "$(pwd)/.editorconfig" ~
 
 # vim
@@ -32,13 +32,5 @@ git submodule update --remote --rebase
 
 echo "Installing brew and brew cask packages..."
 ./brew_setup.sh
-
-# Bash Config
-echo "Configuring bash-it"
-./.bash-it/install.sh -s -n
-./.bash-it/configure.sh
-
-# Custom Sounds
-cp -r "$(pwd)/Sounds/" ~/Library/Sounds/
 
 exit 0

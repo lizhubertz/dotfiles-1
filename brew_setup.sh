@@ -8,7 +8,6 @@ brew tap caskroom/versions
 brew tap caskroom/fonts
 
 brew_packages=(
-  atom
   autoconf
   autojump
   bash-completion
@@ -43,23 +42,24 @@ brew install ${brew_packages[@]}
 cask_packages=(
   1password
   alfred
-  dash
+  atom
+  dash # API documentation browser
   datagrip
   dropbox
-  fantastical
-  google-chrome
-  google-chrome-canary
-  nvalt
+  fantastical # best calendar evah
+  google-chrome # chrome
+  google-chrome-canary # bleeding edge chrome
+  nvalt # simple text-based notetaking
   qlcolorcode
   qlimagesize
   qlmarkdown
   quicklook-json
-  rescuetime
-  rubymine
+  rescuetime # pomodoro-type app
+  rubymine # ruby IDE, requires licensing
   slack
-  spectacle
-  spotify
-  webpquicklook
+  spectacle # window resizing tool https://www.spectacleapp.com/
+  spotify # music
+  webpquicklook # https://github.com/sindresorhus/quick-look-plugins
 )
 
 brew cask install --force --appdir="/Applications" ${cask_packages[@]}
